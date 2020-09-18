@@ -55,16 +55,6 @@ const onSignOutFailure = function (error) {
   $('#message').text('Sign out failed. Try again!')
 }
 
-const onCreateACarSuccess = function (response) {
-  console.log(response)
-  $('#message').text('Thanks for creating a car!')
-  $('#change-password-form').trigger('reset')
-}
-
-const onCreateACarFailure = function (error) {
-  $('#message').text('Create a car failed. Try again!')
-}
-
 module.exports = {
   onSignUpSuccess: onSignUpSuccess,
   onSignUpFailure: onSignUpFailure,
@@ -73,7 +63,5 @@ module.exports = {
   onChangePasswordSuccess: onChangePasswordSuccess,
   onChangePasswordFailure: onChangePasswordFailure,
   onSignOutSuccess: onSignOutSuccess,
-  onSignOutFailure: onSignOutFailure,
-  onCreateACarSuccess: onCreateACarSuccess,
-  onCreateACarFailure: onCreateACarFailure
+  onSignOutFailure: onSignOutFailure
 }

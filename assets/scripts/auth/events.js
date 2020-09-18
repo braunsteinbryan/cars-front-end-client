@@ -53,23 +53,9 @@ const onSignOut = function (event) {
     .catch(ui.onSignOutFailure)
 }
 
-const onCreateACar = function (event) {
-  event.preventDefault()
-
-  const form = event.target
-  const data = getFormFields(form)
-
-  api.createACar(data)
-
-    .then(ui.onCreateACarSuccess)
-
-    .catch(ui.onCreateACarFailure)
-}
-
 module.exports = {
   onSignUp: onSignUp,
   onSignIn: onSignIn,
   onChangePassword: onChangePassword,
-  onSignOut: onSignOut,
-  onCreateACar: onCreateACar
+  onSignOut: onSignOut
 }

@@ -1,6 +1,5 @@
 'use strict'
 
-const authEvents = require('./events')
 const config = require('./../config')
 const store = require('./../store')
 
@@ -41,21 +40,9 @@ const signOut = function (data) {
   })
 }
 
-const createACar = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/create-a-car',
-    method: 'POST',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    },
-    data: data
-  })
-}
-
 module.exports = {
   signUp: signUp,
   signIn: signIn,
   changePassword: changePassword,
-  signOut: signOut,
-  createACar: createACar
+  signOut: signOut
 }
