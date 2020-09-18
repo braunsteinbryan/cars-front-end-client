@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>B'S CARS</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,47 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+
+      <section>
+            <form id="sign-up-form">
+              <fieldset>
+                <legend>Sign up!</legend>
+
+                <label for="sign-up-email">Email</label>
+                <input id="sign-up-email" name="credentials[email]" type="email" placeholder="Email">
+
+                <label for="sign-up-password">Password</label>
+                <input id="sign-up-password" name="credentials[password]" type="password" placeholder="Password">
+
+                <label for="sign-up-password_confirmation">Password Confirmation</label>
+                <input id="sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+
+                <input type="submit" value="Sign up">
+              </fieldset>
+            </form>
+          </section>
+
+        <section>
+          <form id="create-a-car">
+            <fieldset>
+              <legend>Create a Car!</legend>
+
+              <label>Year</label>
+              <input name="car[year]" type="text" placeholder="Year">
+
+              <label>Brand</label>
+              <input name="car[brand]" type="text" placeholder="Brand">
+
+              <label>Model</label>
+              <input name="car[model]" type="text" placeholder="Model">
+
+              <input type="submit">
+            </fieldset>
+          </form>
+        </section>
+
+
+
+      <h1 id="message"></h1>
     </body>
 </html>
