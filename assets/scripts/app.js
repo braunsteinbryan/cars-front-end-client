@@ -9,6 +9,9 @@ const authEvents = require('./auth/events')
 const carCrudEvents = require('./car_crud/events')
 
 $(() => {
+  $('#my-cars').on('click', '#delete-button', carCrudEvents.onDeleteCar)
+  $('#my-cars').on('submit', '.update-car', carCrudEvents.onUpdateCar)
+  $('#my-cars').on('click', '#update-button', carCrudEvents.showUpdateForm)
   $('#get-cars').on('click', carCrudEvents.onGetCars)
   $('#create-a-car').on('submit', carCrudEvents.onCreateACar)
   $('#sign-out-link').on('click', authEvents.onSignOut)

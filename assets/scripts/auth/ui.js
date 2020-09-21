@@ -18,13 +18,12 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text('Thanks for signing in ' + response.user.email + ' !')
   $('#sign-in-form').trigger('reset')
-  $('#welcome-message').text('Click on New Game to start playing!')
-  $('#new-game').show()
-  $('#get-games').show()
   $('#change-password-form').show()
   $('#sign-up-form').hide()
   $('#sign-in-form').hide()
   $('#sign-out-link').show()
+  $('#create-a-car').show()
+  $('#show-cars').show()
 }
 
 const onSignInFailure = function (error) {
@@ -45,11 +44,11 @@ const onSignOutSuccess = function () {
   $('#sign-in-form').show()
   $('#change-password-form').hide()
   $('#sign-out-link').hide()
-  $('#new-game').hide()
-  $('#get-games').hide()
   $('#sign-up-form').show()
   $('#message').hide()
-  $('#game-details').hide()
+  $('#create-a-car').hide()
+  $('#show-cars').hide()
+  $('#my-cars').hide()
 }
 
 const onSignOutFailure = function (error) {

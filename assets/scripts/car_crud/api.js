@@ -24,9 +24,30 @@ const getCars = function (data) {
   })
 }
 
+const updateCar = function (data, carId) {
+  return $.ajax({
+    url: config.apiUrl + '/update-car/' + `${carId}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: data
+  })
+}
 
+const deleteCar = function (carId) {
+  return $.ajax({
+    url: config.apiUrl + '/destroy-car/' + `${carId}`,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   createACar: createACar,
-  getCars: getCars
+  getCars: getCars,
+  updateCar: updateCar,
+  deleteCar: deleteCar
 }
