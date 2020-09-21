@@ -13,46 +13,134 @@
     </head>
     <body>
 
-      <section>
+        <section class="align-auth-events">
+          <div class='indiv-auth-events'>
             <form id="sign-up-form">
               <fieldset>
                 <legend>Sign up!</legend>
-
-                <label for="sign-up-email">Email</label>
-                <input id="sign-up-email" name="credentials[email]" type="email" placeholder="Email">
-
-                <label for="sign-up-password">Password</label>
-                <input id="sign-up-password" name="credentials[password]" type="password" placeholder="Password">
-
-                <label for="sign-up-password_confirmation">Password Confirmation</label>
-                <input id="sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
-
+                  <div>
+                    <label for="sign-up-email">Email</label>
+                  </div>
+                  <div>
+                    <input id="sign-up-email" name="credentials[email]" type="email" placeholder="Email">
+                  </div>
+                  <div>
+                    <label for="sign-up-password">Password</label>
+                  </div>
+                  <div>
+                    <input id="sign-up-password" name="credentials[password]" type="password" placeholder="Password">
+                  </div>
+                  <div>
+                    <label for="sign-up-password_confirmation">Password Confirmation</label>
+                  </div>
+                  <div>
+                    <input id="sign-up-password_confirmation" name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+                  </div>
                 <input type="submit" value="Sign up">
               </fieldset>
             </form>
-          </section>
+          </div>
 
-        <section>
+        <div class='indiv-auth-events'>
+          <form id="sign-in-form">
+            <fieldset>
+              <legend>Sign in!</legend>
+                <div>
+                  <label for="sign-in-email">Email</label>
+                </div>
+                <div>
+                  <input id="sign-in-email" name="credentials[email]" type="email" placeholder="Email">
+                </div>
+                <div>
+                  <label for="sign-in-password">Password</label>
+                </div>
+                <div>
+                  <input id="sign-in-password" name="credentials[password]" type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Sign In">
+            </fieldset>
+          </form>
+        </div>
+
+        <div class='indiv-auth-events'>
+          <form id="change-password-form">
+            <fieldset>
+            <legend>Change Password!</legend>
+              <div>
+                <label for="old-password">Old Password</label>
+              </div>
+              <div>
+                <input id="old-password" name="passwords[old]" type="password" placeholder="Old Password">
+              </div>
+              <div>
+                <label for="new-password">New Password</label>
+              </div>
+              <div>
+                <input id="new-password" name="passwords[new]" type="password" placeholder="New Password">
+              </div>
+              <input type="submit" value="Change Password">
+            </fieldset>
+          </form>
+        </div>
+
+        <div class='sign-out-link'>
+          <a href="#" id="sign-out-link">Sign Out!</a>
+        </div>
+        </section>
+
+      <section class='align-car-events'>
+        <div class="indiv-car-events">
           <form id="create-a-car">
             <fieldset>
               <legend>Create a Car!</legend>
-
-              <label>Year</label>
-              <input name="car[year]" type="text" placeholder="Year">
-
-              <label>Brand</label>
-              <input name="car[brand]" type="text" placeholder="Brand">
-
-              <label>Model</label>
-              <input name="car[model]" type="text" placeholder="Model">
-
+                <div>
+                  <label>Year</label>
+                </div>
+                <div>
+                  <input name="car[year]" type="text" placeholder="Year">
+                </div>
+                <div>
+                  <label>Brand</label>
+                </div>
+                <div>
+                  <input name="car[brand]" type="text" placeholder="Brand">
+                </div>
+                <div>
+                  <label>Model</label>
+                </div>
+                <div>
+                  <input name="car[model]" type="text" placeholder="Model">
+                </div>
               <input type="submit">
             </fieldset>
           </form>
-        </section>
+        </div>
+
+        <div class='indiv-car-events'>
+          <form id='get-cars'>
+            <fieldset>
+              <legend>Show All My Cars!</legend>
+
+                <button>Show!</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class='indiv-car-events'>
+          <form id='update-car'>
+            <fieldset>
+              <legend>Which car would you like to update?</legend>
+              <div>
+                <input type='text' placeholder="Choose car" name=""
 
 
 
+
+
+      </section>
+
+      <div id="my-cars">
       <h1 id="message"></h1>
+    </div>
     </body>
 </html>

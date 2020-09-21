@@ -17,6 +17,17 @@ const onCreateACar = function (event) {
     .catch(ui.onCreateACarFailure)
 }
 
+const onGetCars = function (event) {
+  event.preventDefault()
+
+  api.getCars()
+
+    .then(ui.onGetCarsSuccess)
+
+    .catch(ui.onGetCarsFailure)
+}
+
 module.exports = {
-  onCreateACar: onCreateACar
+  onCreateACar: onCreateACar,
+  onGetCars: onGetCars
 }

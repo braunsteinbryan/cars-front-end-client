@@ -1,1 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
+
+.align-auth-events {
+  display: flex;
+}
+
+.align-car-events {
+  display: flex;
+}
+
+.indiv-auth-events {
+  padding-right: 15px;
+}
+
+.indiv-car-events {
+  padding-right: 15px;
+}
+
+.sign-out-link {
+  padding-top: 150px;
+}

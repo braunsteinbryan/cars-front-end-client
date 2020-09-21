@@ -14,6 +14,19 @@ const createACar = function (data) {
   })
 }
 
+const getCars = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/get-cars',
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+
+
 module.exports = {
-  createACar: createACar
+  createACar: createACar,
+  getCars: getCars
 }
