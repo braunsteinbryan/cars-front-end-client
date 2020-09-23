@@ -1,21 +1,85 @@
 @import '~bootstrap/scss/bootstrap';
 
 .align-auth-events {
+  position: relative;
   display: flex;
+  padding-left: 80px;
 }
 
 .align-car-events {
   display: flex;
+  position: relative;
+  padding-left: 80px;
+}
+
+#container {
+  position: absolute;
+}
+
+#close-nav {
+  color: white;
+  top: 20px;
+  padding-right: 20px;
+  position: fixed;
+  right: 0;
+}
+
+#background {
+  width: 1440px;
+  height: 100%;
+}
+
+#hamburger {
+  background-color: rebeccapurple;
+  border: 2;
+  border-radius: 3px;
+  color: white;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
 }
 
 .indiv-auth-events {
-  padding-right: 15px;
+  padding-right: 0px;
+  position: relative;
 }
 
 .indiv-car-events {
-  padding-right: 15px;
+  padding-right: 0px;
+  position: relative;
+}
+
+#message {
+  right: 0;
+}
+
+nav {
+  background-color: rebeccapurple;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a {
+  color:  white;
+  text-decoration: none;
+}
+
+nav ul {
+  padding: 0px;
+  list-style-type: none;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 1rem 0;
 }
 
 .sign-out-link {
-  padding-top: 150px;
 }

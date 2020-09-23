@@ -32,7 +32,6 @@ const onGetCars = function (event) {
 
 const onUpdateCar = function (event) {
   event.preventDefault()
-  event.stopPropagation()
 
   const updateFormInput = event.target
   const carId = $(updateFormInput).attr('id')

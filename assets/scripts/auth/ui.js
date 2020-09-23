@@ -6,7 +6,6 @@ const onSignUpSuccess = function (response) {
   $('#message').text('Thanks for signing up ' + response.user.email + ' !')
   $('#sign-up-form').trigger('reset')
   $('#sign-up-form').hide()
-  $('#welcome-message').text('To play Tic Tac Toe, Please sign in!')
 }
 
 const onSignUpFailure = function (error) {
@@ -14,7 +13,6 @@ const onSignUpFailure = function (error) {
 }
 
 const onSignInSuccess = function (response) {
-  console.log(response)
   store.user = response.user
   $('#message').text('Thanks for signing in ' + response.user.email + ' !')
   $('#sign-in-form').trigger('reset')
@@ -24,6 +22,7 @@ const onSignInSuccess = function (response) {
   $('#sign-out-link').show()
   $('#create-a-car').show()
   $('#show-cars').show()
+  $('#sign-out-link').show()
 }
 
 const onSignInFailure = function (error) {

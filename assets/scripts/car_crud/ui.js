@@ -3,9 +3,8 @@
 const store = require('./../store')
 
 const onCreateACarSuccess = function (response) {
-  console.log(response)
   $('#message').text('Thanks for creating a car!')
-  $('#change-password-form').trigger('reset')
+  $('#create-a-car').trigger('reset')
 }
 
 const onCreateACarFailure = function (error) {
@@ -14,11 +13,7 @@ const onCreateACarFailure = function (error) {
 
 const onGetCarsSuccess = function (response) {
   $('#my-cars').html('').show()
-  console.log(response.cars[0].brand)
-  // const myPara = document.createElement('p')
-  // myPara.textContent = response.cars
-  // const myCars = JSON.stringify(response.cars[0].brand)
-  // document.getElementById('message').innerHTML = myCars
+
   const cars = response.cars
 for (let i = 0; i < cars.length; i++) {
 
@@ -76,9 +71,8 @@ for (let i = 0; i < cars.length; i++) {
       </fieldset>
     </form>`)
     $('.update-car').hide()
-
-    console.log(cars[i]._id)
   }
+
   $('#message').text('Thanks for indexing your cars!')
 }
 
@@ -87,7 +81,6 @@ const onGetCarsFailure = function (error) {
 }
 
 const onUpdateCarSuccess = function (response) {
-  console.log(response)
   $('#message').text('Thanks for updating a car!')
 }
 
@@ -96,12 +89,35 @@ const onUpdateCarFailure = function (error) {
 }
 
 const onDeleteCarSuccess = function (response) {
-  console.log(response)
   $('#message').text('Thanks for deleting a car!')
 }
 
 const onDeleteCarFailure = function (error) {
   $('#message').text('Delete car failed. Try again!')
+}
+
+// ====== STYLE ======
+
+const button = document.getElementById('hamburger')
+const nav = document.getElementById('nav')
+const closeNav = document.getElementById('close-nav')
+
+button.addEventListener('click', () => {
+  animateNavMenu()
+})
+
+closeNav.addEventListener('click', () => {
+  resetNav()
+})
+
+const animateNavMenu = function () {
+  $('#hamburger').animate({ left: '-100px' }, 500)
+  $('#nav').animate({ right: '195px' }, 500)
+}
+
+const resetNav = function () {
+  $('#hamburger').animate({ left: '20px' }, 500)
+  $('#nav').animate({ right: '-195px' }, 500)
 }
 
 module.exports = {
