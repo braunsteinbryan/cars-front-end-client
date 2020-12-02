@@ -14,7 +14,7 @@ const onSignUpFailure = function (error) {
 
 const onSignInSuccess = function (response) {
   store.user = response.user
-  $('#message').text('Thanks for signing in ' + response.user.email + ' !')
+  $('#message').text('Thanks for signing in ' + response.user.email + ' !').show().fadeOut(2000)
   $('#sign-in-form').trigger('reset')
   $('#change-password-form').show()
   $('#sign-up-form').hide()
@@ -29,8 +29,8 @@ const onSignInFailure = function (error) {
     $('#message').text('Sign in failed. Try again!')
 }
 
-const onChangePasswordSuccess = function () {
-  $('#message').text('Thanks for changing your password!')
+const onChangePasswordSuccess = function (response) {
+  $('#message').html('Thanks for changing your password!').show().fadeOut(2000)
   $('#change-password-form').trigger('reset')
 }
 
@@ -44,7 +44,7 @@ const onSignOutSuccess = function () {
   $('#change-password-form').hide()
   $('#sign-out-link').hide()
   $('#sign-up-form').show()
-  $('#message').hide()
+  $('#message').html('Successfully signed out').show().fadeOut(2000)
   $('#create-a-car').hide()
   $('#show-cars').hide()
   $('#my-cars').hide()

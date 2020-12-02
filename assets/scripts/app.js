@@ -12,6 +12,7 @@ $(() => {
   $('#my-cars').on('click', '#delete-button', carCrudEvents.onDeleteCar)
   $('#my-cars').on('submit', '.update-car', carCrudEvents.onUpdateCar)
   $('#my-cars').on('click', '#update-button', carCrudEvents.showUpdateForm)
+  $('#hide-cars').on('click', carCrudEvents.onHideCars)
   $('#get-cars').on('click', carCrudEvents.onGetCars)
   $('#create-a-car').on('submit', carCrudEvents.onCreateACar)
   $('#create-a-car').hide()

@@ -3,7 +3,8 @@
 const store = require('./../store')
 
 const onCreateACarSuccess = function (response) {
-  $('#message').text('Thanks for creating a car!')
+  $('#index-cars-message').show(2000)
+  $('#message').show().fadeOut(2000)
   $('#create-a-car').trigger('reset')
 }
 
@@ -13,6 +14,7 @@ const onCreateACarFailure = function (error) {
 
 const onGetCarsSuccess = function (response) {
   $('#my-cars').html('').show()
+  $('#index-cars-message').show().fadeOut(2000)
 
   const cars = response.cars
 for (let i = 0; i < cars.length; i++) {
@@ -28,7 +30,6 @@ for (let i = 0; i < cars.length; i++) {
     updateButton.value = cars[i]._id
     deleteButton.value = cars[i]._id
 
-
     myHeading.textContent = 'Car:'
     myPara1.textContent = 'Year: ' + cars[i].year
     myPara2.textContent = 'Brand: ' + cars[i].brand
@@ -36,13 +37,13 @@ for (let i = 0; i < cars.length; i++) {
     updateButton.textContent = 'Update'
     deleteButton.textContent = 'Delete'
 
-
     document.getElementById('my-cars').appendChild(myHeading)
     document.getElementById('my-cars').appendChild(myPara1)
     document.getElementById('my-cars').appendChild(myPara2)
     document.getElementById('my-cars').appendChild(myPara3)
     document.getElementById('my-cars').appendChild(updateButton)
     document.getElementById('my-cars').appendChild(deleteButton)
+
     $('#my-cars').append(`<form class='update-car' id='${cars[i]._id}'>
       <fieldset>
         <legend>What Would You Like To Update The Car To?</legend>
@@ -72,8 +73,6 @@ for (let i = 0; i < cars.length; i++) {
     </form>`)
     $('.update-car').hide()
   }
-
-  $('#message').text('Thanks for indexing your cars!')
 }
 
 const onGetCarsFailure = function (error) {
@@ -81,7 +80,8 @@ const onGetCarsFailure = function (error) {
 }
 
 const onUpdateCarSuccess = function (response) {
-  $('#message').text('Thanks for updating a car!')
+  $('#index-cars-message').show(2000)
+  $('#message').show().fadeOut(2000)
 }
 
 const onUpdateCarFailure = function (error) {
@@ -89,7 +89,8 @@ const onUpdateCarFailure = function (error) {
 }
 
 const onDeleteCarSuccess = function (response) {
-  $('#message').text('Thanks for deleting a car!')
+  $('#index-cars-message').show(2000)
+  $('#message').show().fadeOut(2000)
 }
 
 const onDeleteCarFailure = function (error) {
@@ -98,27 +99,27 @@ const onDeleteCarFailure = function (error) {
 
 // ====== STYLE ======
 
-const button = document.getElementById('hamburger')
-const nav = document.getElementById('nav')
-const closeNav = document.getElementById('close-nav')
-
-button.addEventListener('click', () => {
-  animateNavMenu()
-})
-
-closeNav.addEventListener('click', () => {
-  resetNav()
-})
-
-const animateNavMenu = function () {
-  $('#hamburger').animate({ left: '-100px' }, 500)
-  $('#nav').animate({ right: '195px' }, 500)
-}
-
-const resetNav = function () {
-  $('#hamburger').animate({ left: '20px' }, 500)
-  $('#nav').animate({ right: '-195px' }, 500)
-}
+// const button = document.getElementById('hamburger')
+// const nav = document.getElementById('nav')
+// const closeNav = document.getElementById('close-nav')
+//
+// button.addEventListener('click', () => {
+//   animateNavMenu()
+// })
+//
+// closeNav.addEventListener('click', () => {
+//   resetNav()
+// })
+//
+// const animateNavMenu = function () {
+//   $('#hamburger').animate({ left: '-100px' }, 500)
+//   $('#nav').animate({ right: '195px' }, 500)
+// }
+//
+// const resetNav = function () {
+//   $('#hamburger').animate({ left: '20px' }, 500)
+//   $('#nav').animate({ right: '-195px' }, 500)
+// }
 
 module.exports = {
   onCreateACarSuccess: onCreateACarSuccess,

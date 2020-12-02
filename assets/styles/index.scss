@@ -1,20 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background: linear-gradient(293deg, rgba(2,0,36,1) 0%, rgba(177,198,203,1) 41%, rgba(105,36,152,1) 58%);
+  // background-image: url('https://imgur.com/9cvUpxE.jpeg');
+  color: white;
+  background-size: 1440px 1440px;
+  background-repeat: no-repeat;
+}
+
 .align-auth-events {
-  position: relative;
   display: flex;
   padding-left: 80px;
 }
 
 .align-car-events {
   display: flex;
-  position: relative;
   padding-left: 80px;
 }
 
-#container {
-  position: absolute;
-}
+// #container {
+//   position: relative;
+// }
 
 #close-nav {
   color: white;
@@ -24,10 +30,12 @@
   right: 0;
 }
 
-#background {
-  width: 1440px;
-  height: 100%;
-}
+// #background {
+//   background-size: cover;
+//   z-index: -1;
+//   width: 1440px;
+//   height: 100%;
+// }
 
 #hamburger {
   background-color: rebeccapurple;
@@ -43,16 +51,10 @@
 
 .indiv-auth-events {
   padding-right: 0px;
-  position: relative;
 }
 
 .indiv-car-events {
   padding-right: 0px;
-  position: relative;
-}
-
-#message {
-  right: 0;
 }
 
 nav {
@@ -81,5 +83,6 @@ nav ul li {
   padding: 1rem 0;
 }
 
-.sign-out-link {
+#sign-out-link {
+  color: white;
 }

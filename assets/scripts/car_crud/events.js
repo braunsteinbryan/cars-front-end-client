@@ -16,18 +16,22 @@ const onCreateACar = function (event) {
     .then(ui.onCreateACarSuccess)
 
     .then(onGetCars)
-
+    .then($('#message').html('Create success!'))
     .catch(ui.onCreateACarFailure)
 }
 
 const onGetCars = function (event) {
-  // event.preventDefault()
 
   api.getCars()
 
     .then(ui.onGetCarsSuccess)
-
+    .then($('#index-cars-message').html('Showing most current cars!'))
     .catch(ui.onGetCarsFailure)
+}
+
+const onHideCars = function (event) {
+  $('#my-cars').hide()
+  // $('#message').toggle('on')
 }
 
 const onUpdateCar = function (event) {
@@ -40,8 +44,8 @@ const onUpdateCar = function (event) {
   api.updateCar(data, carId)
 
     .then(ui.onUpdateCarSuccess)
-
     .then(onGetCars)
+    .then($('#message').html('Update success!'))
 
     .catch(ui.onUpdateCarFailure)
 }
@@ -62,6 +66,7 @@ const onDeleteCar = function (event) {
     .then(ui.onDeleteCarSuccess)
 
     .then(onGetCars)
+    .then($('#message').html('Delete success!'))
 
     .catch(ui.onDeleteCarFailure)
 }
@@ -69,6 +74,7 @@ const onDeleteCar = function (event) {
 module.exports = {
   onCreateACar: onCreateACar,
   onGetCars: onGetCars,
+  onHideCars: onHideCars,
   onUpdateCar: onUpdateCar,
   showUpdateForm: showUpdateForm,
   onDeleteCar: onDeleteCar
